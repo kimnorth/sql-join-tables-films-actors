@@ -29,4 +29,17 @@ def update()
   SqlRunner.run(sql)
 end
 
+def self.get_many(sql)
+  films = SqlRunner.run(sql)
+  result = films.map {|film| Film.new(film)}
+  return result
+end
+
+# def film()
+#   sql = "SELECT films.* from films
+#          INNER JOIN films_with_actors ON films_with_actors.actor_id = actor_id
+#          WHERE films_with_actors.film_id = #{@id};"
+#   return Film.get_many(sql)
+# end
+
 end

@@ -46,7 +46,7 @@ films_with_actors3.save()
 # Ocean's 11
 
 films_with_actors4 = FilmsWithActors.new({"film_id" => film3.id, "actor_id" => actor4.id, "year" => 2002})
-films_with_actors3.save()
+films_with_actors4.save()
 
 #----------
 
