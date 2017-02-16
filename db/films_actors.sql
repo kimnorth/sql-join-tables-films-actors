@@ -18,5 +18,6 @@ CREATE TABLE actors (
 CREATE TABLE films_with_actors (
   id_films_actors SERIAL4 PRIMARY KEY,
   film_id INT4 REFERENCES films(film_id) ON DELETE CASCADE,
-  actor_id INT4 REFERENCES actors(actor_id) ON DELETE CASCADE
+  actor_id INT4 REFERENCES actors(actor_id) ON DELETE CASCADE,
+  year INT4
 );
